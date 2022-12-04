@@ -13,17 +13,19 @@
   <div class="page-container">
     <div class="wrapper">
       <header class="page-header">
-        <span class="header-logo">
+        <a class="header-logo">
           <span class="visually-hidden">Перейти на главный сайт</span>
           <img class="header-logo-img img" src="images/logo-device.svg" alt="Логотип сайта девайс" width="145" height="36">
-        </span>
+        </a>
         <div class="page-header-user-bar">
           <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
             <label class="visually-hidden" for="header-serch">Поиск по сайту</label>
-            <div class="header-serch-wrapper">
-              <input class="header-serch" type="search" name="header-serch" id="header-serch" placeholder="Поиск по сайту">
+            <div class="header-search-wrapper">
+              <input class="header-search" type="search" name="header-serch" id="header-serch" placeholder="Поиск по сайту">
             </div>
-            <button class="button-search" type="button">Найти</button>
+            <div class="button-search-wrapper">
+              <button class="button-search" type="button">Найти</button>
+            </div>
           </form>
           <div class="user-bar-wrapper">
             <div class="auth-link-wrapper">
@@ -31,7 +33,7 @@
             </div>
             <a class="header-link contrast-link" href="#">Сравнить</a>
             <div class="bag-wrapper">
-              <button class="header-link bag-link">Корзина</button>
+              <button class="header-link bag-link" type="button">Корзина</button>
               <div class="bag-tooltip">
                 <ul class="bag-list">
                   <li class="bag-item">

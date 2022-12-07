@@ -219,12 +219,31 @@ body {
   line-height: 30px;
 }
 
+.header-link:hover {
+  opacity: 0.6;
+}
+
+.header-link:active {
+  opacity: 0.3;
+}
+
+.header-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+
+.auth-link-wrapper {
+  display: flex;
+  flex-grow: 1;
+}
+
 
 .auth-link {
   align-self: center;
   background-image: url(../images/auth.svg);
   background-repeat: no-repeat;
-  padding-left: 27px;
+  padding-left: 25px;
   background-position: 1px;
 }
 
@@ -236,12 +255,35 @@ body {
   background-position: 1px;
 }
 
+.bag-wrapper {
+  display: flex;
+  margin-left: 18px;
+  align-items: center;
+  position: relative;
+}
+
+
 .bag-link {
   align-self: center;
   background-image: url(../images/bag.svg);
   background-repeat: no-repeat;
   padding-left: 27px;
   background-position: 1px;
+}
+
+.bag-link::before {
+  content: "2";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  text-align: center;
+  padding: 3px 0 4px 0;
+  top: 7px;
+  right: 100px;
 }
 
 .bag-tooltip {
@@ -407,3 +449,57 @@ body {
   color: #000;
   align-items: center;
 }
+
+.navigation {
+  display: grid;
+  padding: 0;
+  width: 100%;
+  grid-template-columns: 1fr 630px;
+  gap: 26px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog-button {
+  width: 293px;
+  padding: 15px 57px 15px 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  align-self: flex-start;
+  z-index: 3;
+  text-decoration: none;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.catalog-dropdown {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+

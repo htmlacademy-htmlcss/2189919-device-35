@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Rubik";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 800;
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
@@ -17,8 +17,8 @@
 @font-face {
   font-family: "Raleway";
   font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -77,6 +77,8 @@ body {
 
 .page-header {
   padding: 19px 60px 22px 60px;
+  background-image: linear-gradient(transparent 40px, #ffe17f 40px);
+  position: relative;
 }
 
 .header-logo {
@@ -105,12 +107,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 30px;
+  justify-content: space-between;
 }
 
-.page-header-container {
-  display: flex;
-  align-items: center;
-}
 
 .search-form {
   display: flex;
@@ -219,6 +218,7 @@ body {
   line-height: 30px;
 }
 
+
 .header-link:hover {
   opacity: 0.6;
 }
@@ -243,7 +243,7 @@ body {
   align-self: center;
   background-image: url(../images/auth.svg);
   background-repeat: no-repeat;
-  padding-left: 25px;
+  padding-left: 27px;
   background-position: 1px;
 }
 
@@ -251,7 +251,7 @@ body {
   align-self: center;
   background-image: url(../images/contrast.svg);
   background-repeat: no-repeat;
-  padding-left: 27px;
+  padding-left: 22px;
   background-position: 1px;
 }
 
@@ -269,6 +269,7 @@ body {
   background-repeat: no-repeat;
   padding-left: 27px;
   background-position: 1px;
+  cursor: pointer;
 }
 
 .bag-link::before {
@@ -282,7 +283,7 @@ body {
   background-color: #fff;
   text-align: center;
   padding: 3px 0 4px 0;
-  top: 7px;
+  top: 12px;
   right: 100px;
 }
 
@@ -471,6 +472,11 @@ body {
   text-transform: uppercase;
 }
 
+.navigation-link.is-active {
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+}
+
 .catalog-button {
   width: 293px;
   padding: 15px 57px 15px 0;
@@ -483,7 +489,7 @@ body {
   z-index: 3;
   text-decoration: none;
   color: #000;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   line-height: 21px;
   font-weight: 800;
@@ -496,10 +502,119 @@ body {
   top: -1px;
   right: 0;
   bottom: 0;
-  margin: 0 auto;
+  margin: auto 0;
   width: 50px;
   height: 50px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 50px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+.catalog-dropdown::after,
+.catalog-dropdown::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 16px;
+  height: 2px;
+  background-color: #000;
 }
 
+.catalog-dropdown::after {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease-in;
+}
+
+.catalog-button:hover .catalog-dropdown {
+  opacity: 1;
+}
+
+.catalog-button:active .catalog-dropdown::after,
+.catalog-button:focus .catalog-dropdown::after {
+  transform: rotate(0deg);
+}
+
+.catalog-button:active .catalog-dropdown,
+.catalog-button:active {
+  opacity: 1;
+}
+
+.catalog-button:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.catalog-button:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.navigation-list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  transform: translateX(4px);
+}
+
+.navigation-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin: 0;
+  padding: 0;
+  column-gap: 46px;
+  row-gap: 15px;
+}
+
+.popover-menu {
+  display: none;
+  position: absolute;
+  padding: 14px 60px 27px 60px;
+  flex-wrap: wrap;
+  width: 1160px;
+  top: 100%;
+  left: -60px;
+  background-color: #FFE17F;
+  z-index: 2;
+}
+
+.catalog-sublist-container {
+  align-self: flex-start;
+  position: relative;
+}
+
+.catalog-button:active ~ .popover-menu,
+.catalog-button:focus ~ .popover-menu,
+.catalog-sublist-container:focus-within > .popover-menu {
+  display: flex;
+}
+
+.popover-menu-sublist {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-bottom: 2px;
+  margin: 0 57px 0 0;
+  list-style-type: none;
+}
+
+.popover-menu-sublist-item:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.popover-menu-sublist-link {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: inherit;
+}
+
+.popover-menu-sublist-link.is-active {
+  border-bottom: 1px solid #000;
+  padding-bottom: 2px;
+}

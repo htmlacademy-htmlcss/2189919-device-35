@@ -618,3 +618,31 @@ body {
   border-bottom: 1px solid #000;
   padding-bottom: 2px;
 }
+
+.navigation-link:hover {
+    opacity: 0.6;
+}
+
+.navigation-link:active {
+    opacity: 0.3;
+}
+
+.navigation-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+}
+
+.popover-menu-sublist-link:hover {
+    opacity: 0.6;
+}
+
+.popover-menu-sublist-link:active {
+    opacity: 0.3;
+}
+
+.popover-menu-sublist-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 2px;
+}
+
+

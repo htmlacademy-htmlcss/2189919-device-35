@@ -721,9 +721,7 @@ body {
 
 .slider-pagination {
     width: 76px;
-    position: absolute;
-    right: 40px;
-    top: 65%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -784,4 +782,114 @@ body {
     margin-bottom: 10px;
     background-color: #FFE17F;
     text-align: end;
+}
+
+.slider-slogan {
+	margin: 0;
+	margin-bottom: 29px;
+	font-family: "Raleway", "Arial", sans-serif;
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 50px;
+	color: #000;
+}
+
+.slider-description {
+	margin: 0;
+	margin-bottom: 50px;
+	font-family: "Rubik", "Arial", sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #444444;
+}
+
+.button-more {
+	width: 220px;
+	margin-bottom: 50px;
+}
+
+.button-link {
+	display: block;
+	position: relative;
+	z-index: 1;
+	border: none;
+	padding: 10px 5px;
+	text-decoration: none;
+	color: #000;
+	text-align: center;
+	font-family: "Raleway", "Arial", sans-serif;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 21px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	background: none;
+	cursor: pointer;
+}
+
+.button-link:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.button-link::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -2px;
+	z-index: -1;
+	width: inherit;
+	height: 8px;
+	margin-top: -5px;
+	background-color: #FFE17F;
+}
+
+.button-link:hover::before,
+.button-link:focus::before {
+	top: 0;
+	height: 40px;
+	margin: 0;
+	transition: all 0.3s linear;
+}
+
+
+.button-link:active::before {
+	top: 0;
+	height: 40px;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.3);
+	transition: all 0.3s linear;
+}
+
+.slider-about-list {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.slider-about-item {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	margin: 0 21px 21px 0;
+	align-content: flex-start;
+    margin-bottom: 26px;
+}
+
+.slider-about-item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.slider-about-value {
+	margin: 0;
+	font-size: 36px;
+	color: #000;
+}
+
+.slider-about-name {
+	margin: 0;
+	font-size: 16px;
+	color: #000;
+	grid-row-start: 2;
 }

@@ -11,11 +11,11 @@ tabsButtons.forEach((button, index) => {
   });
 })
 
-const sliderButtons = document.querySelectorAll('.slides-radio');
+const sliderButtons = document.querySelectorAll('.slide-radio');
 const sliderItems = document.querySelectorAll('.slider-item');
 
 const sliderButtonNext = document.querySelector('.slider-next');
-const sliderButtonPrev = document.querySelector('.slider-prev');
+const sliderButtonPrev = document.querySelector('.slider-previous');
 
 let slideIndex = 0;
 
@@ -23,7 +23,7 @@ sliderButtons.forEach((button, index) => {
   button.addEventListener('click', (evt) => {
     slideIndex = index;
     evt.preventDefault();
-    document.querySelector('.slides-radio.is-active').classList.remove('is-active');
+    document.querySelector('.slide-radio.is-active').classList.remove('is-active');
     document.querySelector('.slider-item.is-active').classList.remove('is-active');
     button.classList.add('is-active');
     sliderItems[index].classList.add('is-active');

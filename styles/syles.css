@@ -270,6 +270,7 @@ body {
   padding-left: 27px;
   background-position: 1px;
   cursor: pointer;
+  position: relative;
 }
 
 .bag-link::before {
@@ -283,7 +284,7 @@ body {
   background-color: #fff;
   text-align: center;
   padding: 3px 0 4px 0;
-  top: 12px;
+  top: 7px;
   right: 100px;
 }
 
@@ -298,6 +299,8 @@ body {
   font-size: 16px;
   line-height: 20px;
   z-index: 4;
+  top: calc(100% + 5px);
+  right: -77px;
 }
 
 .bag-wrapper:hover .bag-tooltip,
@@ -421,7 +424,6 @@ body {
   grid-template-columns: 120px 1fr;
   gap: 10px;
   background-color: #1A1A1A;
-  margin-bottom: 20px;
 }
 
 .bag-total-description {
@@ -449,6 +451,25 @@ body {
   text-transform: uppercase;
   color: #000;
   align-items: center;
+}
+
+.bag-tooltip-link:hover {
+  background-color: #ffe17f;
+}
+
+.bag-tooltip-link:active {
+  background-color: #ffe17f;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.bag-tooltip-link:focus {
+  outline: #af4fff 2px solid;
+  outline-offset: 2px;
+}
+
+.bag-tooltip-link:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: none;
 }
 
 .navigation {

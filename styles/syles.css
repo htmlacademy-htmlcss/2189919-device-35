@@ -914,3 +914,100 @@ body {
 	color: #000;
 	grid-row-start: 2;
 }
+
+.category-catalog {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.category-catalog-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(6, 160px);
+    gap: 40px;
+}
+
+.category-catalog-item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.category-catalog-link {
+    padding: 193px 0 0 0;
+    border-color: transparent;
+    text-decoration: none;
+    color: #000;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    font-family: "Raleway", "Arial", sans-serif;
+    position: relative;
+    flex-grow: 1;
+}
+
+.category-catalog-link::before  {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: #FFE17F;
+    background-repeat: no-repeat;
+    background-size: auto;
+    left: 0;
+    top: 0;
+}
+
+.category-catalog-link:hover::before {
+    background-color: #FFC700;
+}
+
+.category-catalog-link:active {
+    opacity: 0.3;
+}
+
+.category-catalog-link:focus {
+    outline: 2px solid #af4fff;
+    outline-offset: 4px;
+}
+
+.category-virtual::before {
+    background-image: url(../images/category-virtual.svg);
+    background-position: 32px 53px;
+}
+
+.category-monopod::before {
+    background-image: url(../images/category-monopod.svg);
+    background-position: 37px 43px;
+}
+
+.category-camera::before {
+    background-image: url(../images/category-camera.svg);
+    background-position: 44px 36px;
+}
+
+.category-bracelet::before {
+    background-image: url(../images/category-bracelet.svg);
+    background-position: 26px 46px;
+}
+
+.category-watch::before {
+    background-image: url(../images/category-watch.svg);
+    background-position: 52px 31px;
+}
+
+.category-quadrocopter::before {
+    background-image: url(../images/category-quadrocopter.svg);
+    background-position: 14px 45px;
+}
+
+.category-catalog-name {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 24px;
+}

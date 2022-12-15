@@ -1033,3 +1033,109 @@ body {
     margin-bottom: 35px;
     z-index: 1;
 }
+
+.advantages-btn.is-active {
+
+    background-image: none;
+    color: #FFE17F;
+}
+
+.advantages-btn.is-active::before {
+    content: "";
+    background-color: #000;
+    position: absolute;
+    width: 280px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.advantages-btn.is-active:focus {
+    outline: none;
+    padding-left: 33px;
+}
+
+.advantages-btn.is-active:focus::before {
+    outline: 2px solid #AF4FFF;
+    outline-offset: 2px;
+}
+
+.advantages-btn.is-active:hover {
+    padding-left: 33px;
+}
+
+.advantages-btn.is-active:active {
+    padding-left: 33px;
+}
+
+.advantages-contents {
+    padding: 72px 278px 55px 116px;
+    position: relative;
+}
+
+.advantages-content {
+    display: none;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+}
+
+.advantages-content.is-active {
+    display: block;
+}
+
+.advantages-content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.advantages-delivery::after {
+    height: 164px;
+    width: 136px;
+    right: 63px;
+    background-image: url(../images/delivery.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.advantages-guarantees::after {
+    height: 195px;
+    width: 171px;
+    right: 26px;
+    background-image: url(../images/guarantees.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.advantages-credit::after {
+    height: 188px;
+    width: 156px;
+    right: 25px;
+    background-image: url(../images/credit.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.advantages-title {
+    font-family: "Raleway", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 50px;
+    color: #000;
+    margin: 0;
+    margin-bottom: 34px;
+}
+
+.advantages-text {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}

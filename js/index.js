@@ -1,11 +1,11 @@
-const tabsButtons = document.querySelectorAll('.tabs-caption');
-const tabsItems = document.querySelectorAll('.tabs-content');
+const tabsButtons = document.querySelectorAll('.advantages-btn');
+const tabsItems = document.querySelectorAll('.advantages-content');
 
 tabsButtons.forEach((button, index) => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
-    document.querySelector('.tabs-caption.is-active').classList.remove('is-active');
-    document.querySelector('.tabs-content.is-active').classList.remove('is-active');
+    document.querySelector('.advantages-btn.is-active').classList.remove('is-active');
+    document.querySelector('.advantages-content.is-active').classList.remove('is-active');
     button.classList.add('is-active');
     tabsItems[index].classList.add('is-active');
   });

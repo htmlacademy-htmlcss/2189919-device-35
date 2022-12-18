@@ -1139,3 +1139,76 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.rare-product {
+  padding-top: 70px;
+  padding-bottom: 35px;
+}
+
+.rare-product-btn {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  padding: 39px 140px 39px 140px;
+  border: none;
+  text-decoration: none;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.rare-product-btn::before {
+  width: 125px;
+  height: 100%;
+  background-image: url(../images/rare-product.svg);
+  background-color: #FFE17F;
+  top: 0;
+  left: 0;
+}
+
+.rare-product-btn::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-image: url(../images/rare-product-info.svg);
+  background-color: rgba(220, 220, 220, 0.5);
+  top: 50%;
+  right: 43px;
+  opacity: 0.3;
+  transform: translateY(-50%);
+}
+
+.rare-product-btn::before,
+.rare-product-btn::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.rare-product-btn:hover::before {
+  background-color: #FFC700;
+}
+
+.rare-product-btn:hover::after {
+  opacity: 1;
+}
+
+.rare-product-btn:active {
+  opacity: 0.3;
+}
+
+.rare-product-btn:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.rare-product-btn:disabled {
+  pointer-events: none;
+}

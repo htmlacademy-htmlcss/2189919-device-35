@@ -1212,3 +1212,145 @@ body {
 .rare-product-btn:disabled {
   pointer-events: none;
 }
+
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 35px;
+  padding-bottom: 40px;
+}
+
+.about-us {
+  width: 520px;
+  padding: 48px 0 30px 0;
+  position: relative;
+}
+
+.contacts {
+  width: 532px;
+  padding: 48px 0 30px 0;
+  position: relative;
+}
+
+.about-us::before,
+.contacts::before {
+  content: "";
+  position: absolute;
+  width: 84px;
+  height: 7px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+}
+
+.contacts-title {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000;
+  margin: 0;
+  margin-bottom: 48px;
+}
+
+.about-us-description {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.contacts-description{
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.delivery-company-list {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 30px;
+  color: #000;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  padding: 0;
+  padding-left: 36px;
+}
+
+.delivery-company-item:not(:last-child) {
+  margin-bottom: 19px;
+}
+
+.delivery-company-item {
+  position: relative;
+}
+
+.delivery-company-item::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #FFC700;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -35px;
+}
+
+.about-us-btn {
+  width: 270px
+}
+
+.contacts-btn {
+  width: 259px
+}
+
+.contacts-subtitle {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.contacts-address-text {
+  font-style: normal;
+  margin: 0;
+}
+
+.contacts-address {
+  margin-bottom: 30px;
+}
+
+.contacts-phone {
+  font-style: normal;
+  color: #444444;
+}
+
+.contacts-schedule-list {
+  margin-bottom: 30px;
+}
+
+.contacts-schedule-item {
+  margin: 0;
+}
+
+.contacts-phone:hover {
+
+}

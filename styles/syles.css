@@ -1687,3 +1687,325 @@ body {
   outline: 2px solid #af4fff;
   outline-offset: 2px;
 }
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(240, 240, 240, 0.9);
+  z-index: 4;
+}
+
+.modal-container.is-open {
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  padding: 62px 72px;
+  width: 920px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 10px solid rgba(0, 0, 0, 1);
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  width: 760px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  padding: 0;
+  top: 74px;
+  right: 70px;
+  width: 26px;
+  height: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-btn::before,
+.modal-close-btn::after {
+  content: "";
+  position: absolute;
+  width: 34px;
+  height: 4px;
+  top: calc(50% - 1px);
+  left: -4px;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+
+.modal-close-btn::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close-btn:hover {
+  opacity: 0.6;
+}
+
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.modal-title {
+  font-family: 'Raleway';
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 42px;
+}
+
+.modal-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 42px;
+  margin-right: 40px;
+  flex-grow: 1;
+  min-width: 300px;
+}
+
+.field-container:nth-child(2n) {
+  margin-right: 0;
+}
+
+.field-container.is-invalid .field-error {
+  display: block;
+}
+
+.field-container.is-invalid .field-warning {
+  display: block;
+}
+
+.modal-input {
+  background-color: #F0F0F0;
+  font: inherit;
+  height: 60px;
+  border: none;
+  padding: 20px 55px 20px 20px;
+  font-size: 16px;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: right 20px top 50%;
+  color: #000;
+  cursor: pointer;
+}
+
+.modal-input::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.name-input {
+  background-image: url(../images/name-input.svg);
+}
+
+.email-input {
+  background-image: url(../images/email-input.svg);
+}
+
+.modal-input:hover {
+  background-color: #DCDCDC;
+}
+
+.modal-input:active {
+  background-color:  #EBEBEB;
+}
+
+.modal-input:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.field-container.is-invalid .modal-input {
+  border: 2px solid rgba(255, 61, 61, 1);
+}
+
+.modal-input:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.field-label {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.field-name {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  color: #000000;
+}
+
+.field-text {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.field-error {
+  color: #FF3D3D;
+  display: none;
+}
+
+.number-field {
+  width: 180px;
+  position: relative;
+  display: flex;
+}
+
+.number-btn {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  z-index: 1;
+}
+
+.minus-btn {
+  background-image: url(../images/minus-btn.svg);
+  left: 18px;
+}
+
+.plus-btn {
+  background-image: url(../images/plus-btn.svg);
+  right: 17px;
+}
+
+.number-btn:hover {
+  opacity: 0.6;
+}
+
+.number-btn:active {
+  opacity: 0.3;
+}
+
+.number-btn:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.number-btn:hover ~ .modal-input{
+  background-color: #DCDCDC;
+}
+
+.count-input {
+  display: flex;
+  width: 180px;
+  padding: 14px 40px 14px 40px;
+  text-align: center;
+}
+
+.count-input::-webkit-outer-spin-button,
+.count-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.number-container {
+  max-width: 180px;
+  min-width: 180px;
+  flex-grow: 0;
+}
+
+.submit-container {
+  width: 100%;
+}
+
+.modal-submit-btn {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.label-count-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.count-info {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-color: #FFE17F;
+  border-radius: 50%;
+  background-image: url(../images/rare-product-info.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin-left: 8px;
+  top: -3px;
+  position: relative;
+}
+
+.count-info:hover .modal-tooltip {
+  display: block;
+}
+
+.order-input {
+  max-width: 540px;
+}
+
+.modal-tooltip {
+  display: none;
+  position: absolute;
+  width: 200px;
+  background-color: #000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  top: 36px;
+  left: -39px;
+  transform: translateX(-50%);
+  padding: 19px 18px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  min-height: 70px;
+  z-index: 5;
+}
+
+.tooltip-content {
+  margin: 0;
+  padding: 0;
+}
+
+.modal-tooltip::before {
+  content: "";
+  position: absolute;
+  right: 40px;
+  top: -14px;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #000000;
+}

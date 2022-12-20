@@ -372,5 +372,64 @@
       </div>
     </footer>
   </div>
+  <div class="modal-container">
+    <div class="modal">
+      <button class="modal-close-btn" type="button">
+        <span class="visually-hidden">Закрыть модульное окно</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="field-container">
+            <label class="field-label" for="name">
+              <span class="field-name">Ваше имя:</span>
+            </label>
+            <input class="modal-input name-input" type="text" name="name" id="name" placeholder="Введите ваше имя">
+            <span class="field-warning field-text">Добавьте имя</span>
+            <span class="field-error field-text">Забавное у вас имя</span>
+          </div>
+          <div class="field-container">
+            <label class="field-label" for="email">
+              <span class="field-name">Ваш e-mail:</span>
+            </label>
+            <input class="modal-input email-input" type="email" name="email" id="email" placeholder="Введите ваш e-mail">
+            <span class="field-warning field-text">Добавьте адрес почты</span>
+            <span class="field-error field-text">Забавный у вас адрес</span>
+          </div>
+          <div class="field-container">
+            <label class="field-label" for="order">
+              <span class="field-name">Что нужно привезти:</span>
+            </label>
+            <input class="modal-input order-input" type="text" name="order" id="order" placeholder="В свободной форме">
+          </div>
+          <div class="field-container number-container">
+            <div class="label-count-container">
+              <label class="field-label" for="count">
+                <span class="field-name field-name-count">Количество:</span>
+              </label>
+              <div class="count-info">
+                <span class="visually-hidden">Дополнительная информация</span>
+                <div class="modal-tooltip">
+                  <p class="tooltip-content">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</p>
+                </div>
+              </div>
+            </div>
+            <div class="number-field">
+              <button class="number-btn minus-btn" type="button">
+                <span class="visually-hidden">Уменьшить число товаров</span>
+              </button>
+              <button class="number-btn plus-btn" type="button">
+                <span class="visually-hidden">Увеличить число товаров</span>
+              </button>
+              <input class="modal-input count-input" type="number" name="count" id="count" placeholder="1" value="1">
+            </div>
+          </div>
+          <div class="submit-container">
+            <button class="button-link modal-submit-btn" type="submit">Отправить</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
 </body>
 </html>

@@ -210,9 +210,9 @@ body {
 .header-link {
   text-decoration: none;
   color: #000;
-  margin: auto 0 auto 18px;
+  margin: auto 0 auto 14px;
   border: none;
-  font-family: inherit;
+  font-family: "Rubik", "Arial", sans-serif;
   background-color: transparent;
   font-size: 18px;
   line-height: 30px;
@@ -235,6 +235,11 @@ body {
 
 .auth-link-wrapper {
   display: flex;
+  flex-grow: 1;
+}
+
+.exit-link {
+  opacity: 0.3;
   flex-grow: 1;
 }
 

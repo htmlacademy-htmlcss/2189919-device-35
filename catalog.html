@@ -140,6 +140,39 @@
           </li>
         </ul>
       </section>
+      <div class="catalog-container">
+        <section class="catalog-products container">
+          <h2 class="visually-hidden">Каталог товаров магазина с фильтрами</h2>
+          <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+            <h3 class="catalog-title">Фильтр:</h3>
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-subtitle">Стоимость</legend>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 119px">
+                    <button class="range-toggle toggle-min" type="button">
+                      <span class="visually-hidden">Увеличить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max" type="button">
+                      <span class="visually-hidden">Уменьшить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="wrapper-inputs">
+                  <label class="filter-range-input range-input-from" style="left: 0">
+                    от
+                    <input class="range-input" type="number" value="0" name="min-price">
+                  </label>
+                  <label class="filter-range-input range-input-to" style="left: 119px">
+                    до
+                    <input class="range-input" type="number" value="5000" name="max-price">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+      </div>
     </main>
   </div>
 </body>

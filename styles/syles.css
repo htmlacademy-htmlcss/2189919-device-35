@@ -2015,3 +2015,77 @@ body {
   border: 8px solid transparent;
   border-bottom: 8px solid #000000;
 }
+
+.breadcrumbs-title {
+  font-family: 'Raleway' "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.breadcrumbs {
+  padding: 35px 100px 34px 100px;
+}
+
+.breadcrumbs-list {
+  list-style-type: none;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumbs-item:not(:last-child) {
+  margin-right: 36px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #000;
+  transition: opacity 0.3s;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.breadcrumbs-link-current {
+  pointer-events: none;
+}
+
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item::after {
+  position: absolute;
+  content: "";
+  background-image: url(../images/breadcrumbs-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 7px;
+  width: 4px;
+  right: -20px;
+  top: 8px;
+}
+
+.breadcrumbs-item:last-child::after {
+  content: none;
+}

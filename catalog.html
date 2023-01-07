@@ -21,7 +21,7 @@
             <form class="search-form" method="post" action="https://echo.htmlacademy.ru/">
               <label class="visually-hidden" for="header-serch">Поиск по сайту</label>
               <div class="header-search-wrapper">
-                <input class="header-search" type="search" name="header-serch" id="header-serch" placeholder="Поиск по сайту">
+                <input class="header-search header-search-catalog" type="search" name="header-serch" id="header-serch" placeholder="Текст поиска">
               </div>
               <div class="button-search-wrapper">
                 <button class="button-search" type="button">Найти</button>
@@ -231,6 +231,24 @@
             </fieldset>
             <button class="button-link filter-button" type="submit">Показать</button>
           </form>
+          <div class="catalog-products-sorting">
+            <div class="sort-container">
+              <span class="catalog-title sort-title">Сортировка:</span>
+              <select class="sort-select" aria-label="Сортировка товаров">
+                <option value="popular">Популярные</option>
+                <option value="cheap">Дешевые</option>
+                <option value="expensive">Дорогие</option>
+              </select>
+              <div class="sort-buttons">
+                <a class="sort-button sort-button-up" href="#">
+                  <span class="visually-hidden">Показать сначала наименее популярные товары</span>
+                </a>
+                <a class="sort-button sort-button-down" href="#">
+                  <span class="visually-hidden">Показать сначала наиболее популярные товары</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>

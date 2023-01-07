@@ -2244,3 +2244,130 @@ body {
 .range-input-to {
   transform: translateX(10%);
 }
+
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+.filter-range-input:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.range-input:focus {
+  border: none;
+  outline: none;
+}
+
+.catalog-subtitle {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
+.radio-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.control {
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #CCCCCC;
+  border-radius: 3px;
+  left: 0;
+}
+
+.control-input-checkbox:checked + .control-mark {
+  background-image: url(../images/filter-check.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 2px solid #000;
+}
+
+.bluetooth-filter-group {
+  margin-bottom: 35px;
+}
+
+.control-radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid #CCCCCC;
+  border-radius: 50px;
+  left: 0;
+}
+
+.control-input-radio:checked + .control-radio {
+  border-color: #000;
+}
+
+.control-input-radio:checked + .control-radio::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.filter-button {
+  width: 220px;
+}
+
+.control:hover {
+  opacity: 0.6;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-input-checkbox:focus + .control-mark::after,
+.control-input-radio:focus + .control-radio::after {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -2px;
+  top: -2px;
+}
+
+.control-input-checkbox:disabled ~ .control-label,
+.control-input-radio:disabled ~ .control-label,
+.control-input-checkbox:disabled ~ .control-mark,
+.control-input-radio:disabled ~ .control-radio {
+  opacity: 0.1;
+  pointer-events: none;
+}

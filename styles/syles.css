@@ -2631,3 +2631,137 @@ body {
   padding: 21px 12px 23px 8px;
   color: rgba(0, 0, 0, 0.6);
 }
+
+.catalog-download-button {
+  display: block;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  width: 100%;
+  border: 3px solid #E5E5E5;
+  padding: 15px 39px;
+  margin: 0;
+  margin-bottom: 44px;
+  text-align: center;
+}
+
+
+.catalog-download-button:hover {
+  border: 3px solid #000;
+}
+
+.catalog-download-button:active {
+  opacity: 0.3;
+}
+
+.catalog-download-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-download-button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.pagination-wrapper {
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  background-color: #EBEBEB;
+}
+
+.pagination-button {
+  font-family: "Raleway", "Arial", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  padding: 25px;
+}
+
+.pagination-button-prev {
+  justify-content: start;
+}
+
+.pagination-button-next {
+  justify-content: end;
+}
+
+.pagination-list {
+  list-style-type: none;
+  padding: 0;
+  margin: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pagination-item {
+  display: flex;
+}
+
+.pagination-link {
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #444444;
+  opacity: 0.3;
+  padding: 10px 15px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-link.is-active {
+  opacity: 0.6;
+}
+
+.pagination-link:hover {
+  opacity: 1;
+}
+
+.pagination-link:active {
+  opacity: 0.1;
+}
+
+.pagination-item:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.pagination-link-more {
+  pointer-events: none;
+}
+
+.pagination-link.is-active:hover {
+  opacity: 0.6;
+}
+
+.pagination-link.is-active:active {
+  opacity: 0.6;
+}
+
+.pagination-button:hover {
+  background-color: #dcdcdc;
+}
+
+.pagination-button:active {
+  background-color: #dcdcdc;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}

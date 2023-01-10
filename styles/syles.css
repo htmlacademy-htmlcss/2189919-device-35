@@ -459,7 +459,7 @@ body {
   min-height: 50px;
   padding: 14px;
   text-decoration: none;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
@@ -503,7 +503,7 @@ body {
 .navigation-link {
   text-decoration: none;
   color: #000000;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", "Arial", sans-serif;
   font-size: 18px;
   font-weight: 800;
   line-height: 21px;
@@ -1789,7 +1789,7 @@ body {
 }
 
 .modal-title {
-  font-family: 'Raleway';
+  font-family: "Raleway", "Arial", sans-serif;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;

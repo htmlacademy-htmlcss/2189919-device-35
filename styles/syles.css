@@ -135,7 +135,7 @@ body {
   border-radius: 50px 0 0 50px;
   background-image: url(../images/svg-search.svg);
   background-repeat: no-repeat;
-  background-position: 16px 12px;
+  background-position: 14px 13px;
 }
 
 .header-search:focus {
@@ -2137,17 +2137,18 @@ body {
   text-transform: uppercase;
   color: #000000;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 }
 
 .catalog-filter-group {
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 31px;
 }
 
 .catalog-subtitle {
+  width: 100%;
   font-family: "Rubik", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -2155,7 +2156,7 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
   color: #000000;
-  padding: 12px 0 0 0;
+  padding: 14px 0 0 0;
   margin: 0;
   position: relative;
 }
@@ -2172,7 +2173,7 @@ body {
 
 .range {
   max-width: 200px;
-  padding-top: 30px;
+  padding-top: 8px;
 }
 
 .range-scale {
@@ -2247,7 +2248,7 @@ body {
 }
 
 .range-input {
-  width: 50px;
+  width: 60px;
   padding: 0;
   margin-left: 5px;
   text-align: left;
@@ -2260,11 +2261,13 @@ body {
 }
 
 .range-input-from {
-  transform: translateX(-24%);
+  transform: translateX(-23%)
+  translateY(-14%);
 }
 
 .range-input-to {
-  transform: translateX(10%);
+  transform: translateX(1%)
+  translateY(-19%);
 }
 
 
@@ -2310,6 +2313,7 @@ body {
 }
 
 .control {
+  display: inline-block;
   position: relative;
   padding-left: 36px;
   cursor: pointer;
@@ -2419,11 +2423,12 @@ body {
   line-height: 30px;
   color: #000000;
   padding: 0;
-  padding-right: 32px;
+  padding-right: 21px;
   appearance: none;
   background-image: url(../images/sort-select.svg);
   background-repeat: no-repeat;
-  background-position: right 12px top 50%;
+  background-position: right -1px top 50%;
+  max-width: 400px;
 }
 
 .sort-select:hover {
@@ -2446,8 +2451,8 @@ body {
 
 .sort-buttons {
   display: grid;
-  grid-template-columns: 11px 11px;
-  grid-gap: 19px;
+  grid-template-columns: 21px 21px;
+  grid-gap: 9px;
   margin-left: auto;
 }
 
@@ -2691,7 +2696,7 @@ body {
   width: 100%;
   margin: 0;
   display: grid;
-  grid-template-columns: 150px 1fr 150px;
+  grid-template-columns: auto 280px auto;
   background-color: #EBEBEB;
 }
 
@@ -2708,11 +2713,12 @@ body {
 }
 
 .pagination-button-prev {
-  justify-content: start;
+  justify-self: start;
 }
 
 .pagination-button-next {
-  justify-content: end;
+  justify-self: end;
+  padding: 25px 21px 25px 25px;
 }
 
 .pagination-list {
@@ -2734,7 +2740,7 @@ body {
   text-align: center;
   color: #444444;
   opacity: 0.3;
-  padding: 10px 15px;
+  padding: 10px;
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
   font-size: 16px;

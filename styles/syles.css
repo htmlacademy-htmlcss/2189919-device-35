@@ -77,7 +77,7 @@ body {
 
 .page-header {
   padding: 19px 60px 22px 60px;
-  background-image: linear-gradient(transparent 40px, #ffe17f 40px);
+  background-image: linear-gradient(transparent 40px, #FFE17F 40px);
   position: relative;
 }
 
@@ -195,7 +195,7 @@ body {
 }
 
 .button-search:active {
-  background-color: #000;
+  background-color: #000000;
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -466,7 +466,7 @@ body {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #000;
+  color: #000000;
   align-items: center;
 }
 
@@ -690,10 +690,52 @@ body {
   padding: 0 40px;
 }
 
+.button-link {
+  display: inline-block;
+  border: none;
+  padding: 10px 9px 9px 13px;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0) 40%,
+    #FFE16F 40%,
+    #FFE16F 60%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-position: center;
+  background-size: 100% 100%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-size 0.2s ease;
+}
+
+.button-link:hover {
+  background-size: 100% 500%;
+}
+
+.button-link:active {
+  background-color: #FFCC33;
+  background-image: none;
+}
+
+.button-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 .slider {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  z-index: 2;
+  padding-bottom: 35px;
 }
 
 .slider-controls {
@@ -718,7 +760,7 @@ body {
 }
 
 .slider-button:hover,
-.slider-controls:hover {
+.slide-radio:hover {
   opacity: 0.6;
 }
 
@@ -738,8 +780,8 @@ body {
   outline-offset: 4px;
 }
 
-.slide-radio:active,
 .slider-button:active,
+.slide-radio:active,
 .slide-radio:active::after {
   opacity: 0.3;
   outline: none;
@@ -751,20 +793,25 @@ body {
 }
 
 .slider-next {
-  background-image: url(../images/next.svg);
+  left: 540px;
+  background-image: url("../images/next.svg");
 }
 
 .slider-previous {
-  background-image: url(../images/prev.svg);
+  left: 30px;
+  background-image: url("../images/prev.svg");
 }
 
 .slider-pagination {
+  position: absolute;
   width: 76px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   z-index: 2;
+  margin: 0 auto;
+  top: 94%;
+  left: 47%;
 }
 
 .slide-radio {
@@ -789,6 +836,7 @@ body {
   width: 100%;
   background-image: linear-gradient(#FFE17F 112px, #FFFFFF 112px);
   justify-content: flex-end;
+  margin-bottom: 26px;
 }
 
 .slider-item.is-active {
@@ -813,9 +861,8 @@ body {
 .slider-number {
   display: block;
   color: #FFFFFF;
-  font-weight: 700;
   font-size: 180px;
-  line-height: 30px;
+  font-weight: 700;
   margin: 0;
   padding: 0 49px 0 0;
   margin-bottom: 10px;
@@ -824,108 +871,69 @@ body {
 }
 
 .slider-slogan {
-	margin: 0;
-	margin-bottom: 29px;
-	font-family: "Raleway", "Arial", sans-serif;
-	font-weight: 800;
-	font-size: 50px;
-	line-height: 50px;
-	color: #000000;
+  font-family: "Raleway", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+  color: #000000;
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .slider-description {
-	margin: 0;
-	margin-bottom: 50px;
-	font-family: "Rubik", "Arial", sans-serif;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 30px;
-	color: #444444;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #444444;
+  margin: 0;
+  margin-bottom: 51px;
 }
 
 .button-more {
-	width: 220px;
-	margin-bottom: 50px;
+  min-width: 220px;
+  margin-bottom: 49px;
 }
-
-.button-link {
-	display: block;
-	position: relative;
-	z-index: 1;
-	border: none;
-	padding: 10px 9px 9px 13px;
-	text-decoration: none;
-	color: #000000;
-	text-align: center;
-	font-family: "Raleway", "Arial", sans-serif;
-	font-size: 18px;
-	font-weight: 800;
-	line-height: 21px;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	background: none;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0) 40%,
-    #FFE17F 40%,
-    #FFE17F 60%,
-    rgba(255, 255, 255, 0) 60%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-position: center;
-  background-size: 100% 100%;
-  background-color: transparent;
-  cursor: pointer;
-  transition: background-size 0.3s ease;
-}
-
-.button-link:hover {
-    background-size: 100% 500%;
-  }
-
-  .button-link:active {
-    background-color: #FFCC33;
-    background-image: none;
-  }
-
-  .button-link:focus {
-    outline: 2px solid #AF4FFF;
-  }
 
 .slider-about-list {
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -21px;
 }
 
 .slider-about-item {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 12px;
-	margin: 0 21px 21px 0;
-	align-content: flex-start;
-  margin-bottom: 26px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 0 21px 21px 0;
+  max-width: 180px;
+  min-width: 100px;
+  align-content: flex-start;
 }
 
 .slider-about-item:nth-child(3n) {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .slider-about-value {
-	margin: 0;
-	font-size: 36px;
-	color: #000000;
+  margin: 0;
+  font-size: 36px;
+  color: #000000;
 }
 
 .slider-about-name {
-	margin: 0;
-	font-size: 16px;
-	color: #000000;
-	grid-row-start: 2;
+  margin: 0;
+  font-size: 16px;
+  grid-row-start: 2;
 }
 
+
 .category-catalog {
-  padding-top: 70px;
+  padding-top: 47px;
   padding-bottom: 35px;
 }
 
@@ -1766,7 +1774,7 @@ body {
   height: 4px;
   top: calc(50% - 1px);
   left: -4px;
-  background-color: #000;
+  background-color: #000000;
   transform: rotate(45deg);
 }
 
@@ -2009,7 +2017,7 @@ body {
   display: none;
   position: absolute;
   width: 200px;
-  background-color: #000;
+  background-color: #000000;
   box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
   top: 36px;
   left: -39px;
@@ -2630,6 +2638,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .new-product:hover .cards-title,
